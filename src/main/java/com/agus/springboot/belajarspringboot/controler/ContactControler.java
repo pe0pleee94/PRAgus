@@ -28,7 +28,7 @@ public class ContactControler {
        ContactResponse contactResponse = contactService.get(user,contactid);
        return WebResponse.<ContactResponse>builder().data(contactResponse).build();
     }
-    @PatchMapping(path = "/api/contact/{contactId}",
+    @PutMapping(path = "/api/contact/{contactId}",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public WebResponse<ContactResponse>update(User user,
